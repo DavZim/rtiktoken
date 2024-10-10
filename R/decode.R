@@ -4,7 +4,6 @@
 #' @param model a model to use for tokenization, either a model name, eg `gpt-4o`
 #' or a tokenizer, eg `o200k_base`.
 #' See also [available tokenizers](https://github.com/zurawiki/tiktoken-rs/blob/main/tiktoken-rs/src/tokenizer.rs).
-#' @param verbose if `TRUE` print additional information, default `FALSE`
 #'
 #' @return a character string of the decoded tokens or a vector or strings
 #' @export
@@ -15,24 +14,18 @@
 #'
 #' tokens <- get_tokens(c("Hello World", "Alice Bob Charlie"), "gpt-4o")
 #' decode_tokens(tokens, "gpt-4o")
-decode_tokens <- function(tokens, model, verbose = FALSE) {
-  tok <- tryCatch(rs_model_to_tokenizer(model),
-                  error = function(e) NULL)
-  if (is.null(tok)) stop(sprintf("Unknown Model '%s'", model))
-
-  if (verbose) cat(sprintf("Using Tokenizer '%s'\n", tok))
-
+decode_tokens <- function(tokens, model) {
   if (is.list(tokens)) {
-    res <- sapply(tokens, function(x) decode_tokens_internal(as.integer(x), tok),
-                  USE.NAMES = FALSE)
-    return(res)
+    sapply(tokens, function(x) decode_tokens_internal(as.integer(x), model),
+           USE.NAMES = FALSE)
+  } else {
+    decode_tokens_internal(as.integer(tokens), model)
   }
-  decode_tokens_internal(as.integer(tokens), tok)
 }
 
-decode_tokens_internal <- function(tokens, tok) {
+decode_tokens_internal <- function(tokens, model) {
   res <- tryCatch(
-    rs_decode_tokens(tokens, tok),
+    rs_decode_tokens(tokens, model),
     error = function(e) {
       stop(paste("Could not decode tokens:", e))
     }

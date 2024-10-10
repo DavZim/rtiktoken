@@ -4,7 +4,7 @@
 \alias{decode_tokens}
 \title{Decodes tokens back to text}
 \usage{
-decode_tokens(tokens, model, verbose = FALSE)
+decode_tokens(tokens, model)
 }
 \arguments{
 \item{tokens}{a vector of tokens to decode, or a list of tokens}
@@ -12,8 +12,6 @@ decode_tokens(tokens, model, verbose = FALSE)
 \item{model}{a model to use for tokenization, either a model name, eg \verb{gpt-4o}
 or a tokenizer, eg \code{o200k_base}.
 See also \href{https://github.com/zurawiki/tiktoken-rs/blob/main/tiktoken-rs/src/tokenizer.rs}{available tokenizers}.}
-
-\item{verbose}{if \code{TRUE} print additional information, default \code{FALSE}}
 }
 \value{
 a character string of the decoded tokens or a vector or strings

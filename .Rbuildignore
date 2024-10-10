@@ -1,0 +1,7 @@
+^rtiktoken\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^src/\.cargo$
+^README\.Rmd$
+src/vendor/*
+^cran-comments\.md$

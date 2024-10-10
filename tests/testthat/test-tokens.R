@@ -6,6 +6,7 @@ test_that("model_to_tokenizer works", {
 
 test_that("get_tokens works", {
   expect_equal(get_tokens("Hello World", "gpt-4o"), c(13225L, 5922L))
+  expect_equal(get_tokens("Hello World", "o200k_base"), c(13225L, 5922L))
   expect_equal(get_tokens("Hello World", "gpt-3.5-turbo"), c(9906L, 4435L))
   expect_error(get_tokens("Hello World", "wrong-model"))
 

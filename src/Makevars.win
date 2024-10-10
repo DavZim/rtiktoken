@@ -12,6 +12,15 @@ $(SHLIB): $(STATLIB)
 CARGOTMP = $(CURDIR)/.cargo
 
 $(STATLIB):
+	# thanks to JosiahParry and this way to reduze size:
+	# https://github.com/R-ArcGIS/arcpbf/blob/main/src/Makevars
+	# uncompress vendored deps
+	if [ -f ./rust/vendor.tar.xz ]; then \
+		tar xf rust/vendor.tar.xz && \
+		mkdir -p $(CARGOTMP) && \
+		cp rust/vendor-config.toml $(CARGOTMP)/config.toml; \
+	fi
+
 	mkdir -p $(TARGET_DIR)/libgcc_mock
 	# `rustc` adds `-lgcc_eh` flags to the compiler, but Rtools' GCC doesn't have
 	# `libgcc_eh` due to the compilation settings. So, in order to please the

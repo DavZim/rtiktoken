@@ -14,11 +14,10 @@
 #' @examples
 #' get_token_count("Hello World", "gpt-4o")
 get_token_count <- function(text, model) {
-  tok <- rs_model_to_tokenizer(model)
   if (length(text) > 1) {
-    res <- sapply(text, function(x) rs_get_token_count(x, tok),
+    sapply(text, function(x) rs_get_token_count(x, model),
                   USE.NAMES = FALSE)
-    return(res)
+  } else {
+    rs_get_token_count(text, model)
   }
-  rs_get_token_count(text, tok)
 }

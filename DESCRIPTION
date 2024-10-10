@@ -1,0 +1,16 @@
+Package: rtiktoken
+Title: BPE Tokenizer for OpenAI's models
+Version: 0.0.1
+Authors@R: c(
+    person("David", "Zimmermann-Kollenda", , "david_j_zimmermann@hotmail.com", role = c("aut", "cre"))
+  )
+Description: A thin wrapper around the `tiktoken-rs` crate, allowing to encode text into BPE tokens and decode back to text.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Config/rextendr/version: 0.3.1
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+SystemRequirements: Cargo (Rust's package manager), rustc
