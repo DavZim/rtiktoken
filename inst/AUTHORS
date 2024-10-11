@@ -1,0 +1,47 @@
+Authors of vendored cargo crates
+ - aho-corasick 1.1.3: Andrew Gallant
+ - anyhow 1.0.89: David Tolnay
+ - autocfg 1.4.0: Josh Stone
+ - base64 0.21.7: Alice Maz, Marshall Pierce
+ - bit-set 0.5.3: Alexis Beingessner
+ - bit-vec 0.6.3: Alexis Beingessner
+ - bitflags 2.6.0: The Rust Project Developers
+ - bstr 1.10.0: Andrew Gallant
+ - cfg-if 1.0.0: Alex Crichton
+ - extendr-api 0.7.1: andy-thomason, Thomas Down, Mossa Merhi Reimert, Claus O. Wilke, Hiroaki Yutani, Ilia A. Kosenkov, Michael Milton
+ - extendr-macros 0.7.1: andy-thomason, Thomas Down, Mossa Merhi Reimert, Claus O. Wilke, Hiroaki Yutani, Ilia A. Kosenkov, Michael Milton
+ - fancy-regex 0.12.0: Raph Levien, Robin Stocker
+ - lazy_static 1.5.0: Marvin Löbel
+ - libR-sys 0.7.1: andy-thomason, Thomas Down, Mossa Merhi Reimert, Claus O. Wilke, Ilia A. Kosenkov, Hiroaki Yutani
+ - libc 0.2.159: The Rust Project Developers
+ - lock_api 0.4.12: Amanieu d'Antras
+ - memchr 2.7.4: Andrew Gallant, bluss
+ - once_cell 1.20.2: Aleksey Kladov
+ - parking_lot 0.12.3: Amanieu d'Antras
+ - parking_lot_core 0.9.10: Amanieu d'Antras
+ - paste 1.0.15: David Tolnay
+ - proc-macro2 1.0.87: David Tolnay, Alex Crichton
+ - quote 1.0.37: David Tolnay
+ - redox_syscall 0.5.7: Jeremy Soller
+ - regex 1.11.0: The Rust Project Developers, Andrew Gallant
+ - regex-automata 0.4.8: The Rust Project Developers, Andrew Gallant
+ - regex-syntax 0.8.5: The Rust Project Developers, Andrew Gallant
+ - rustc-hash 1.1.0: The Rust Project Developers
+ - scopeguard 1.2.0: bluss
+ - serde 1.0.210: Erick Tryzelaar, David Tolnay
+ - serde_derive 1.0.210: Erick Tryzelaar, David Tolnay
+ - smallvec 1.13.2: The Servo Project Developers
+ - syn 2.0.79: David Tolnay
+ - tiktoken-rs 0.5.9: Roger Zurawicki
+ - unicode-ident 1.0.13: David Tolnay
+ - windows-targets 0.52.6: Microsoft
+ - windows_aarch64_gnullvm 0.52.6: Microsoft
+ - windows_aarch64_msvc 0.52.6: Microsoft
+ - windows_i686_gnu 0.52.6: Microsoft
+ - windows_i686_gnullvm 0.52.6: Microsoft
+ - windows_i686_msvc 0.52.6: Microsoft
+ - windows_x86_64_gnu 0.52.6: Microsoft
+ - windows_x86_64_gnullvm 0.52.6: Microsoft
+ - windows_x86_64_msvc 0.52.6: Microsoft
+
+(This file was auto-generated from 'cargo metadata' on 2024-10-11)

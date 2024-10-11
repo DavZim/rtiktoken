@@ -8,5 +8,5 @@ crate-type = [ 'staticlib' ]
 name = 'rtiktoken'
 
 [dependencies]
-extendr-api = { version = "*", default-features = false, features = ["result_list"] }
+extendr-api = { version = "0.7.1", default-features = false, features = ["result_list"] }
 tiktoken-rs = "0.5.9"

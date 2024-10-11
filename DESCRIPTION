@@ -2,7 +2,9 @@ Package: rtiktoken
 Title: BPE Tokenizer for OpenAI's models
 Version: 0.0.1
 Authors@R: c(
-    person("David", "Zimmermann-Kollenda", , "david_j_zimmermann@hotmail.com", role = c("aut", "cre"))
+    person("David", "Zimmermann-Kollenda", , "david_j_zimmermann@hotmail.com", role = c("aut", "cre")),
+    person("Roger Zurawicki", role = "aut", comment = "tiktoken-rs Rust library"),
+    person("Authors of the dependency Rust crates", role = "aut", comment = "see AUTHORS file")
   )
 Description: A thin wrapper around the `tiktoken-rs` crate, allowing to encode text into BPE tokens and decode back to text.
 License: MIT + file LICENSE
