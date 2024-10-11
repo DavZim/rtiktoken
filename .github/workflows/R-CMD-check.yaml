@@ -46,6 +46,11 @@ jobs:
           extra-packages: any::rcmdcheck
           needs: check
 
+      - name: Check Rust and Cargo versions
+        run: |
+          rustc --version
+          cargo --version
+
       - uses: r-lib/actions/check-r-package@v2
         with:
           upload-snapshots: true
