@@ -5,12 +5,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>BPE Tokenizer for OpenAI's models • rtiktoken</title>
+<title>BPE Tokenizer for OpenAI's Models • rtiktoken</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="BPE Tokenizer for OpenAI's models">
+<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="BPE Tokenizer for OpenAI's Models">
 <meta name="description" content="A thin wrapper around the `tiktoken-rs` crate, allowing to encode text into BPE tokens and decode back to text.">
 <meta property="og:description" content="A thin wrapper around the `tiktoken-rs` crate, allowing to encode text into BPE tokens and decode back to text.">
 </head>
@@ -22,7 +22,7 @@
 
     <a class="navbar-brand me-2" href="index.html">rtiktoken</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,7 @@
 </h1></div>
 <!-- badges: start -->
 
-<p><code>rtiktoken</code> is a thin wrapper around <a href="https://github.com/zurawiki/tiktoken-rs" class="external-link"><code>tiktoken-rs</code></a> (and in turn around <a href="https://github.com/openai/tiktoken" class="external-link">OpenAI’s Python library <code>tiktoken</code></a>). It provides functions to encode text into tokens used by OpenAI’s models and decode tokens back into text using <a href="https://en.wikipedia.org/wiki/Byte_pair_encoding" class="external-link">BPE</a> tokenizers. It is also useful to count the numbers of tokens in a text to guess how expensive a call to OpenAI’s API would be. Note that all the tokenization happens offline and no internet connection is required.</p>
+<p><a href="https://davzim.github.io/rtiktoken/">rtiktoken</a> is a thin wrapper around <a href="https://github.com/zurawiki/tiktoken-rs" class="external-link"><code>tiktoken-rs</code></a> (and in turn around <a href="https://github.com/openai/tiktoken" class="external-link">OpenAI’s Python library <code>tiktoken</code></a>). It provides functions to encode text into tokens used by OpenAI’s models and decode tokens back into text using <a href="https://en.wikipedia.org/wiki/Byte_pair_encoding" class="external-link">BPE</a> tokenizers. It is also useful to count the numbers of tokens in a text to guess how expensive a call to OpenAI’s API would be. Note that all the tokenization happens offline and no internet connection is required.</p>
 <p>Another use-case is to compute similarity scores between texts using tokens.</p>
 <p>Other use-cases can be found in the OpenAI’s cookbook <a href="https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb" class="external-link">How to Count Tokens with <code>tiktoken</code></a>.</p>
 <p>To verify the outputs of the functions, see also <a href="https://platform.openai.com/tokenizer" class="external-link">OpenAI’s Tokenizer Platform</a>.</p>
@@ -155,7 +155,14 @@
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">document</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
-  </main><aside class="col-md-3"><div class="license">
+  </main><aside class="col-md-3"><div class="links">
+<h2 data-toc-skip>Links</h2>
+<ul class="list-unstyled">
+<li><a href="https://davzim.github.io/rtiktoken/issues">Report a bug</a></li>
+</ul>
+</div>
+
+<div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
@@ -176,7 +183,7 @@
 <ul class="list-unstyled">
 <li>David Zimmermann-Kollenda <br><small class="roles"> Author, maintainer </small>  </li>
 <li>Roger Zurawicki <br><small class="roles"> Author </small>  </li>
-<li>Authors of the dependency Rust crates <br><small class="roles"> Author </small>  </li>
+<li>Authors of the dependent Rust crates <br><small class="roles"> Author </small>  </li>
 <li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
@@ -194,7 +201,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by David Zimmermann-Kollenda, Roger Zurawicki, Authors of the dependency Rust crates.</p>
+  <p>Developed by David Zimmermann-Kollenda, Roger Zurawicki, Authors of the dependent Rust crates.</p>
 </div>
 
 <div class="pkgdown-footer-right">
