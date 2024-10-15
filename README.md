@@ -8,7 +8,7 @@
 [![CRAN status](https://www.r-pkg.org/badges/version/rtiktoken)](https://CRAN.R-project.org/package=rtiktoken)
 <!-- badges: end -->
 
-`rtiktoken` is a thin wrapper around
+`{rtiktoken}` is a thin wrapper around
 [`tiktoken-rs`](https://github.com/zurawiki/tiktoken-rs) (and in turn
 around [OpenAI’s Python library
 `tiktoken`](https://github.com/openai/tiktoken)). It provides functions

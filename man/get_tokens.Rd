@@ -24,5 +24,5 @@ get_tokens("Hello World", "gpt-4o")
 get_tokens("Hello World", "o200k_base")
 }
 \seealso{
-\url{model_to_tokenizer}
+\code{\link[=model_to_tokenizer]{model_to_tokenizer()}}, \code{\link[=decode_tokens]{decode_tokens()}}
 }

@@ -8,7 +8,7 @@
 #' @return a vector of tokens for the given text as integer
 #' @export
 #'
-#' @seealso [model_to_tokenizer]()
+#' @seealso [model_to_tokenizer()], [decode_tokens()]
 #'
 #' @examples
 #' get_tokens("Hello World", "gpt-4o")

@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/rtiktoken)](https://CRAN.R-project.org/package=rtiktoken)
 <!-- badges: end -->
 
-`rtiktoken` is a thin wrapper around [`tiktoken-rs`](https://github.com/zurawiki/tiktoken-rs) (and in turn around [OpenAI's Python library `tiktoken`](https://github.com/openai/tiktoken)).
+`{rtiktoken}` is a thin wrapper around [`tiktoken-rs`](https://github.com/zurawiki/tiktoken-rs) (and in turn around [OpenAI's Python library `tiktoken`](https://github.com/openai/tiktoken)).
 It provides functions to encode text into tokens used by OpenAI's models and decode tokens back into text using [BPE](https://en.wikipedia.org/wiki/Byte_pair_encoding) tokenizers.
 It is also useful to count the numbers of tokens in a text to guess how expensive a call to OpenAI's API would be.
 Note that all the tokenization happens offline and no internet connection is required.

@@ -21,8 +21,13 @@ Decodes tokens back to text
 }
 \examples{
 tokens <- get_tokens("Hello World", "gpt-4o")
+tokens
 decode_tokens(tokens, "gpt-4o")
 
 tokens <- get_tokens(c("Hello World", "Alice Bob Charlie"), "gpt-4o")
+tokens
 decode_tokens(tokens, "gpt-4o")
+}
+\seealso{
+\code{\link[=model_to_tokenizer]{model_to_tokenizer()}}, \code{\link[=get_tokens]{get_tokens()}}
 }

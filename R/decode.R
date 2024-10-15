@@ -8,11 +8,15 @@
 #' @return a character string of the decoded tokens or a vector or strings
 #' @export
 #'
+#' @seealso [model_to_tokenizer()], [get_tokens()]
+#'
 #' @examples
 #' tokens <- get_tokens("Hello World", "gpt-4o")
+#' tokens
 #' decode_tokens(tokens, "gpt-4o")
 #'
 #' tokens <- get_tokens(c("Hello World", "Alice Bob Charlie"), "gpt-4o")
+#' tokens
 #' decode_tokens(tokens, "gpt-4o")
 decode_tokens <- function(tokens, model) {
   if (is.list(tokens)) {

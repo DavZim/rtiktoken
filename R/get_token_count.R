@@ -8,7 +8,7 @@
 #' @return the number of tokens in the text, vector of ints
 #' @export
 #'
-#' @seealso [model_to_tokenizer]()
+#' @seealso [model_to_tokenizer()], [get_tokens()]
 #' @export
 #'
 #' @examples
