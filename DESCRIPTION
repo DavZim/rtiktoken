@@ -8,8 +8,8 @@ Authors@R: c(
   )
 Description: A thin wrapper around the `tiktoken-rs` crate, allowing to encode text into BPE tokens and decode back to text.
 License: MIT + file LICENSE
-URL: https://davzim.github.io/rtiktoken/, https://davzim.github.io/rtiktoken/
-BugReports: https://davzim.github.io/rtiktoken/issues
+URL: https://davzim.github.io/rtiktoken/, https://github.com/DavZim/rtiktoken/
+BugReports: https://github.com/DavZim/rtiktoken/issues
 Suggests: 
     testthat (>= 3.0.0)
 SystemRequirements: Cargo (Rust's package manager), rustc >= 1.65.0

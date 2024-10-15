@@ -9,12 +9,12 @@ get_token_count(text, model)
 \arguments{
 \item{text}{a character string to encode to tokens, can be a vector}
 
-\item{model}{a model to use for tokenization, either a model name, eg \verb{gpt-4o}
-or a tokenizer, eg \code{o200k_base}.
+\item{model}{a model to use for tokenization, either a model name, e.g., \verb{gpt-4o}
+or a tokenizer, e.g., \code{o200k_base}.
 See also \href{https://github.com/zurawiki/tiktoken-rs/blob/main/tiktoken-rs/src/tokenizer.rs}{available tokenizers}.}
 }
 \value{
-the number of tokens in the text, vector of ints
+the number of tokens in the text, vector of integers
 }
 \description{
 Returns the number of tokens in a text

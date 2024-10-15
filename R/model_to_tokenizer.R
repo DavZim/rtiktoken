@@ -1,6 +1,6 @@
 #' Gets the name of the tokenizer used by a model
 #'
-#' @param model the model to use, eg `gpt-4o`
+#' @param model the model to use, e.g., `gpt-4o`
 #'
 #' @return the tokenizer used by the model
 #' @export

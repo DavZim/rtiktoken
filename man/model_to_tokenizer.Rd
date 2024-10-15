@@ -7,7 +7,7 @@
 model_to_tokenizer(model)
 }
 \arguments{
-\item{model}{the model to use, eg \verb{gpt-4o}}
+\item{model}{the model to use, e.g., \verb{gpt-4o}}
 }
 \value{
 the tokenizer used by the model

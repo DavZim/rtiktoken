@@ -1,8 +1,8 @@
 #' Converts text to tokens
 #'
 #' @param text a character string to encode to tokens, can be a vector
-#' @param model a model to use for tokenization, either a model name, eg `gpt-4o`
-#' or a tokenizer, eg `o200k_base`.
+#' @param model a model to use for tokenization, either a model name, e.g., `gpt-4o`
+#' or a tokenizer, e.g., `o200k_base`.
 #' See also [available tokenizers](https://github.com/zurawiki/tiktoken-rs/blob/main/tiktoken-rs/src/tokenizer.rs).
 #'
 #' @return a vector of tokens for the given text as integer

@@ -1,8 +1,8 @@
 #' Decodes tokens back to text
 #'
 #' @param tokens a vector of tokens to decode, or a list of tokens
-#' @param model a model to use for tokenization, either a model name, eg `gpt-4o`
-#' or a tokenizer, eg `o200k_base`.
+#' @param model a model to use for tokenization, either a model name, e.g., `gpt-4o`
+#' or a tokenizer, e.g., `o200k_base`.
 #' See also [available tokenizers](https://github.com/zurawiki/tiktoken-rs/blob/main/tiktoken-rs/src/tokenizer.rs).
 #'
 #' @return a character string of the decoded tokens or a vector or strings

@@ -9,8 +9,8 @@ decode_tokens(tokens, model)
 \arguments{
 \item{tokens}{a vector of tokens to decode, or a list of tokens}
 
-\item{model}{a model to use for tokenization, either a model name, eg \verb{gpt-4o}
-or a tokenizer, eg \code{o200k_base}.
+\item{model}{a model to use for tokenization, either a model name, e.g., \verb{gpt-4o}
+or a tokenizer, e.g., \code{o200k_base}.
 See also \href{https://github.com/zurawiki/tiktoken-rs/blob/main/tiktoken-rs/src/tokenizer.rs}{available tokenizers}.}
 }
 \value{
