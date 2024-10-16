@@ -1,3 +1,7 @@
+# rtiktoken 0.3, 0.4
+
+* fix build for CRAN
+
 # rtiktoken 0.2
 
 * fix Notes and Warning for CRAN release
