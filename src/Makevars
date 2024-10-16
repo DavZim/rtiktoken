@@ -8,9 +8,9 @@ all: C_clean
 $(SHLIB): $(STATLIB)
 
 if [ -n "$_R_CHECK_LIMIT_CORES" ]; then
-    export BUILDFLAGS="-j 2 --offline"
+	export BUILDFLAGS="-j 2 --offline"
 else
-    export BUILDFLAGS="--offline"
+	export BUILDFLAGS="--offline"
 fi
 CARGOTMP = $(CURDIR)/.cargo
 
