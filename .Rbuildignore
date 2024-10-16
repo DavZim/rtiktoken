@@ -10,3 +10,4 @@ src/vendor/*
 ^docs$
 ^pkgdown$
 ^CRAN-SUBMISSION$
+^src/rust/vendor$

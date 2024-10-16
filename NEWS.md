@@ -1,3 +1,7 @@
+# rtiktoken 0.5
+
+* switch to rextendr defaults for configure and makevars
+
 # rtiktoken 0.3, 0.4
 
 * fix build for CRAN
