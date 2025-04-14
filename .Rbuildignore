@@ -12,3 +12,6 @@ src/vendor/*
 ^CRAN-SUBMISSION$
 ^src/rust/vendor$
 ^src/rust/vendor-authors.R$
+^src/rust/target$
+^src/Makevars$
+^src/Makevars\.win$

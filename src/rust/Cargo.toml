@@ -1,12 +1,13 @@
 [package]
-name = 'rtiktoken'
-version = '0.1.0'
-edition = '2021'
+name = "rtiktoken"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.65.0"
 
 [lib]
-crate-type = [ 'staticlib' ]
-name = 'rtiktoken'
+crate-type = [ "staticlib" ]
+name = "rtiktoken"
 
 [dependencies]
-extendr-api = { version = "0.7.1", default-features = false, features = ["result_list"] }
+extendr-api = { version = "0.8.0", default-features = false, features = ["result_list"] }
 tiktoken-rs = "0.5.9"

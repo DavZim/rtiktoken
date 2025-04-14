@@ -1,3 +1,5 @@
 .Rproj.user
 docs
 src/rust/vendor
+src/Makevars
+src/Makevars.win

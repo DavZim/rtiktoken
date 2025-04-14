@@ -1,3 +1,7 @@
+# rtiktoken 0.0.7
+
+* update extendr version and templates to address non API changes and symbols testing in R 4.5
+
 # rtiktoken 0.5
 
 * switch to rextendr defaults for configure and makevars
