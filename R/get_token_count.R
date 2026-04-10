@@ -13,11 +13,13 @@
 #'
 #' @examples
 #' get_token_count("Hello World", "gpt-4o")
+#' get_token_count("Hello World", "gpt-5.3")
+#' get_token_count("Hello World", "text-embedding-3-small")
 get_token_count <- function(text, model) {
   if (length(text) > 1) {
-    sapply(text, function(x) rs_get_token_count(x, model),
+    sapply(text, function(x) unwrap_extendr_result(rs_get_token_count(x, model)),
                   USE.NAMES = FALSE)
   } else {
-    rs_get_token_count(text, model)
+    unwrap_extendr_result(rs_get_token_count(text, model))
   }
 }

@@ -21,6 +21,8 @@ Returns the number of tokens in a text
 }
 \examples{
 get_token_count("Hello World", "gpt-4o")
+get_token_count("Hello World", "gpt-5.3")
+get_token_count("Hello World", "text-embedding-3-small")
 }
 \seealso{
 \code{\link[=model_to_tokenizer]{model_to_tokenizer()}}, \code{\link[=get_tokens]{get_tokens()}}

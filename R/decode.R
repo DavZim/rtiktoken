@@ -29,7 +29,7 @@ decode_tokens <- function(tokens, model) {
 
 decode_tokens_internal <- function(tokens, model) {
   res <- tryCatch(
-    rs_decode_tokens(tokens, model),
+    unwrap_extendr_result(rs_decode_tokens(tokens, model)),
     error = function(e) {
       stop(paste("Could not decode tokens:", e))
     }

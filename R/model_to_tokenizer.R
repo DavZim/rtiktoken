@@ -12,5 +12,5 @@
 #' model_to_tokenizer("text-embedding-ada-002")
 #' model_to_tokenizer("text-embedding-3-small")
 model_to_tokenizer <- function(model) {
-  rs_model_to_tokenizer(model)
+  unwrap_extendr_result(rs_model_to_tokenizer(model))
 }

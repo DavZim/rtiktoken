@@ -1,7 +1,7 @@
 use extendr_api::prelude::*;
 use tiktoken_rs::{
-  get_bpe_from_model,
-  get_bpe_from_tokenizer,
+  bpe_for_model,
+  bpe_for_tokenizer,
   tokenizer::{
     get_tokenizer,
     Tokenizer,
@@ -10,57 +10,66 @@ use tiktoken_rs::{
 
 // encodes text to tokens
 #[extendr]
-fn rs_get_tokens(text: &str, model: &str) -> Vec<usize> {
+fn rs_get_tokens(text: &str, model: &str) -> Result<Vec<u32>> {
     // try to load the BPE from model (gpt-4o),
     // otherwise from tokenizer (o200k-base)
-    let bpe = match get_bpe_from_model(model) {
+    let bpe = match bpe_for_model(model) {
         Ok(bpe) => bpe,
         Err(_) => {
-          get_bpe_from_tokenizer(str_to_tokenizer(model))
-            .expect("Failed to get BPE from tokenizer")
+          let tokenizer = str_to_tokenizer(model)?;
+          bpe_for_tokenizer(tokenizer).map_err(|e| {
+            Error::Other(format!("Failed to get BPE from tokenizer '{}': {}", model, e))
+          })?
         },
     };
 
     let tokens = bpe.encode_with_special_tokens(text);
-    tokens
+    Ok(tokens)
 }
 
 #[extendr]
-fn rs_get_token_count(text: &str, model: &str) -> usize {
-  let tokens = rs_get_tokens(text, model);
-  tokens.len()
+fn rs_get_token_count(text: &str, model: &str) -> Result<usize> {
+  let tokens = rs_get_tokens(text, model)?;
+  Ok(tokens.len())
 }
 
 // decodes tokens to text
 #[extendr]
-fn rs_decode_tokens(tokens: Vec<i32>, model: &str) -> String {
-  let bpe = match get_bpe_from_model(model) {
+fn rs_decode_tokens(tokens: Vec<i32>, model: &str) -> Result<String> {
+  let bpe = match bpe_for_model(model) {
     Ok(bpe) => bpe,
     Err(_) => {
-      get_bpe_from_tokenizer(str_to_tokenizer(model))
-        .expect("Failed to get BPE from tokenizer")
+      let tokenizer = str_to_tokenizer(model)?;
+      bpe_for_tokenizer(tokenizer).map_err(|e| {
+        Error::Other(format!("Failed to get BPE from tokenizer '{}': {}", model, e))
+      })?
     },
   };
 
-  let vec_usize: Vec<usize> = tokens.into_iter().map(|x| x as usize).collect();
-  bpe.decode(vec_usize.clone()).unwrap()
+  let vec: Vec<u32> = tokens.into_iter().map(|x| x as u32).collect();
+  bpe.decode(&vec)
+    .map_err(|e| Error::Other(format!("Failed to decode tokens: {}", e)))
 }
 
 
 
-fn str_to_tokenizer(tokenizer: &str) -> Tokenizer {
+fn str_to_tokenizer(tokenizer: &str) -> Result<Tokenizer> {
     match tokenizer {
-        "o200k_base" => Tokenizer::O200kBase,
-        "cl100k_base" => Tokenizer::Cl100kBase,
-        "p50k_base" => Tokenizer::P50kBase,
-        "r50k_base" => Tokenizer::R50kBase,
-        "p50k_edit" => Tokenizer::P50kEdit,
-        "gpt2" => Tokenizer::Gpt2,
-        _ => panic!("Failed to get tokenizer from string '{}'", tokenizer),
+      "o200k_harmony" | "o200k-harmony" => Ok(Tokenizer::O200kHarmony),
+      "o200k_base" | "o200k-base" => Ok(Tokenizer::O200kBase),
+      "cl100k_base" | "cl100k-base" => Ok(Tokenizer::Cl100kBase),
+      "p50k_base" | "p50k-base" => Ok(Tokenizer::P50kBase),
+      "r50k_base" | "r50k-base" => Ok(Tokenizer::R50kBase),
+      "p50k_edit" | "p50k-edit" => Ok(Tokenizer::P50kEdit),
+      _ => get_tokenizer(tokenizer)
+        .ok_or_else(|| Error::Other(format!("Failed to get tokenizer from string '{}'", tokenizer))),
     }
 }
+
+// see https://github.com/zurawiki/tiktoken-rs/blob/main/tiktoken-rs/src/tokenizer.rs
 fn tokenizer_to_str(tokenizer: Tokenizer) -> &'static str {
     match tokenizer {
+        Tokenizer::O200kHarmony => "o200k_harmony",
         Tokenizer::O200kBase => "o200k_base",
         Tokenizer::Cl100kBase => "cl100k_base",
         Tokenizer::P50kBase => "p50k_base",
@@ -70,13 +79,14 @@ fn tokenizer_to_str(tokenizer: Tokenizer) -> &'static str {
     }
 }
 
+
 // gets the name of the tokenizer for a given model
 #[extendr]
-fn rs_model_to_tokenizer(model: &str) -> &'static str {
-  return tokenizer_to_str(
-    get_tokenizer(model)
-      .expect(&format!("Could not find tokenizer for model '{}'", model))
-  );
+fn rs_model_to_tokenizer(model: &str) -> Result<&'static str> {
+  // note model-name != tokenizer-name, thefore this back and forth
+  get_tokenizer(model)
+    .map(tokenizer_to_str)
+    .ok_or_else(|| Error::Other(format!("Could not find tokenizer for model '{}'", model)))
 }
 
 

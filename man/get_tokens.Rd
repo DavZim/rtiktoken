@@ -22,6 +22,8 @@ Converts text to tokens
 \examples{
 get_tokens("Hello World", "gpt-4o")
 get_tokens("Hello World", "o200k_base")
+get_tokens("Hello World", "gpt-5.")
+get_tokens("Hello World", "text-embedding-3-small")
 }
 \seealso{
 \code{\link[=model_to_tokenizer]{model_to_tokenizer()}}, \code{\link[=decode_tokens]{decode_tokens()}}

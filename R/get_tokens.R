@@ -13,6 +13,8 @@
 #' @examples
 #' get_tokens("Hello World", "gpt-4o")
 #' get_tokens("Hello World", "o200k_base")
+#' get_tokens("Hello World", "gpt-5.")
+#' get_tokens("Hello World", "text-embedding-3-small")
 get_tokens <- function(text, model) {
   if (length(text) > 1) {
     return(lapply(text, function(x) get_tokens_internal(x, model)))
@@ -23,7 +25,7 @@ get_tokens <- function(text, model) {
 
 get_tokens_internal <- function(text, model) {
   res <- tryCatch(
-    rs_get_tokens(text, model),
+    unwrap_extendr_result(rs_get_tokens(text, model)),
     error = function(e) {
       stop(paste("Could not get tokens from text:", e))
     }

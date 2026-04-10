@@ -1,3 +1,8 @@
+# rtiktoken 0.11.0
+
+* Update the underlying `tikoken-rs` package to v0.11.0, this adds gpt-5 models etc.
+* Align the `rtiktoken` package version with the underlying Rust library version.
+
 # rtiktoken 0.0.7
 
 * update extendr version and templates to address non API changes and symbols testing in R 4.5
