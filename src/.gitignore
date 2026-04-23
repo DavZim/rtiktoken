@@ -2,5 +2,7 @@
 *.so
 *.dll
 target
-vendor
 .cargo
+rust/vendor
+Makevars
+Makevars.win
