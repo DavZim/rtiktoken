@@ -83,7 +83,9 @@ the tokenizer names):
 
 | Model Name                                                                | Tokenizer Name        |
 |---------------------------------------------------------------------------|-----------------------|
-| GPT-4o models                                                             | `o200k_base`          |
+| Gpt-5 models                                                              | `o200k_base`          |
+| gpt-oss                                                                   | `o200k_harmony`       |
+| Gpt-4o models                                                             | `o200k_base`          |
 | ChatGPT models, e.g., `text-embedding-ada-002`, `gpt-3.5-turbo`, `gpt-4-` | `cl100k_base`         |
 | Code models, e.g., `text-davinci-002`, `text-davinci-003`                 | `p50k_base`           |
 | Edit models, e.g., `text-davinci-edit-001`, `code-davinci-edit-001`       | `p50k_edit`           |

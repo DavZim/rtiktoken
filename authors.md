@@ -17,14 +17,14 @@ Source:
 
 Zimmermann-Kollenda D, Roger Zurawicki, Authors of the dependent Rust
 crates (2026). *rtiktoken: A Byte-Pair-Encoding (BPE) Tokenizer for
-OpenAI's Large Language Models*. R package version 0.11.0,
+OpenAI's Large Language Models*. R package version 0.11.0-1,
 <https://davzim.github.io/rtiktoken/>.
 
     @Manual{,
       title = {rtiktoken: A Byte-Pair-Encoding (BPE) Tokenizer for OpenAI's Large Language Models},
       author = {David Zimmermann-Kollenda and {Roger Zurawicki} and {Authors of the dependent Rust crates}},
       year = {2026},
-      note = {R package version 0.11.0},
+      note = {R package version 0.11.0-1},
       url = {https://davzim.github.io/rtiktoken/},
     }
 
