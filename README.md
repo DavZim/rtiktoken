@@ -4,8 +4,11 @@
 # rtiktoken
 
 <!-- badges: start -->
+
 [![R-CMD-check](https://github.com/DavZim/rtiktoken/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DavZim/rtiktoken/actions/workflows/R-CMD-check.yaml)
-[![CRAN status](https://www.r-pkg.org/badges/version/rtiktoken)](https://CRAN.R-project.org/package=rtiktoken)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/rtiktoken)](https://CRAN.R-project.org/package=rtiktoken)
+[![extendr](https://img.shields.io/badge/extendr-%5E0.9.0-276DC2)](https://extendr.github.io/extendr/extendr_api/)
 <!-- badges: end -->
 
 `{rtiktoken}` is a thin wrapper around
@@ -89,13 +92,15 @@ The following models use the following tokenizers (note that all
 functions of this package both allow to use the model names as well as
 the tokenizer names):
 
-| Model Name                                                             | Tokenizer Name        |
-|------------------------------------------------------------------------|-----------------------|
-| GPT-4o models                                                          | `o200k_base`          |
-| ChatGPT models, e.g., `text-embedding-ada-002`, `gpt-3.5-turbo`, `gpt-4-` | `cl100k_base`         |
-| Code models, e.g., `text-davinci-002`, `text-davinci-003`                 | `p50k_base`           |
-| Edit models, e.g., `text-davinci-edit-001`, `code-davinci-edit-001`       | `p50k_edit`           |
-| GPT-3 models, e.g., `davinci`                                             | `r50k_base` or `gpt2` |
+| Model Name | Tokenizer Name |
+|----|----|
+| Gpt-5 models | `o200k_base` |
+| gpt-oss | `o200k_harmony` |
+| Gpt-4o models | `o200k_base` |
+| ChatGPT models, e.g., `text-embedding-ada-002`, `gpt-3.5-turbo`, `gpt-4-` | `cl100k_base` |
+| Code models, e.g., `text-davinci-002`, `text-davinci-003` | `p50k_base` |
+| Edit models, e.g., `text-davinci-edit-001`, `code-davinci-edit-001` | `p50k_edit` |
+| GPT-3 models, e.g., `davinci` | `r50k_base` or `gpt2` |
 
 ## Development
 
