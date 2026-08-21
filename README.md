@@ -8,7 +8,7 @@
 [![R-CMD-check](https://github.com/DavZim/rtiktoken/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DavZim/rtiktoken/actions/workflows/R-CMD-check.yaml)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/rtiktoken)](https://CRAN.R-project.org/package=rtiktoken)
-[![extendr](https://img.shields.io/badge/extendr-%5E0.9.0-276DC2)](https://extendr.github.io/extendr/extendr_api/)
+[![extendr](https://img.shields.io/badge/extendr-%5E0.9.0-276DC2)](https://extendr.rs/extendr/extendr_api/)
 <!-- badges: end -->
 
 `{rtiktoken}` is a thin wrapper around

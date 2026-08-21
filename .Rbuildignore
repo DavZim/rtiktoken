@@ -1,5 +1,7 @@
 ^rtiktoken\.Rproj$
 ^\.Rproj\.user$
+^\.codex$
+^\.quarto$
 ^LICENSE\.md$
 ^src/\.cargo$
 ^README\.Rmd$

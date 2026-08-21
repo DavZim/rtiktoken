@@ -1,3 +1,8 @@
+Note for resubmit of version 0.11.0.2:
+
+- fixed redirect URL
+- fix windows build
+
 Note for submit of version 0.11.0.1:
 
 - update rextendr dependency, removes the "found non-API call to R" note
