@@ -1,5 +1,9 @@
 # Changelog
 
+## rtiktoken 0.11.0.1
+
+- Update extendr dependency to fix CRAN notes.
+
 ## rtiktoken 0.11.0
 
 - Update the underlying `tikoken-rs` package to v0.11.0, this adds gpt-5

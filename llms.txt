@@ -26,6 +26,7 @@ Platform](https://platform.openai.com/tokenizer).
 You can install `rtiktoken` like so:
 
 ``` r
+
 # Dev version
 # install.packages("devtools")
 # devtools::install_github("DavZim/rtiktoken")
@@ -37,6 +38,7 @@ install.packages("rtiktoken")
 ## Example
 
 ``` r
+
 library(rtiktoken)
 
 # 1. Encode text into tokens
@@ -81,15 +83,15 @@ The following models use the following tokenizers (note that all
 functions of this package both allow to use the model names as well as
 the tokenizer names):
 
-| Model Name                                                                | Tokenizer Name        |
-|---------------------------------------------------------------------------|-----------------------|
-| Gpt-5 models                                                              | `o200k_base`          |
-| gpt-oss                                                                   | `o200k_harmony`       |
-| Gpt-4o models                                                             | `o200k_base`          |
-| ChatGPT models, e.g., `text-embedding-ada-002`, `gpt-3.5-turbo`, `gpt-4-` | `cl100k_base`         |
-| Code models, e.g., `text-davinci-002`, `text-davinci-003`                 | `p50k_base`           |
-| Edit models, e.g., `text-davinci-edit-001`, `code-davinci-edit-001`       | `p50k_edit`           |
-| GPT-3 models, e.g., `davinci`                                             | `r50k_base` or `gpt2` |
+| Model Name | Tokenizer Name |
+|----|----|
+| Gpt-5 models | `o200k_base` |
+| gpt-oss | `o200k_harmony` |
+| Gpt-4o models | `o200k_base` |
+| ChatGPT models, e.g., `text-embedding-ada-002`, `gpt-3.5-turbo`, `gpt-4-` | `cl100k_base` |
+| Code models, e.g., `text-davinci-002`, `text-davinci-003` | `p50k_base` |
+| Edit models, e.g., `text-davinci-edit-001`, `code-davinci-edit-001` | `p50k_edit` |
+| GPT-3 models, e.g., `davinci` | `r50k_base` or `gpt2` |
 
 ## Development
 
@@ -97,6 +99,7 @@ the tokenizer names):
 you need to have `Rust` installed on your machine.
 
 ``` r
+
 rextendr::document()
 devtools::document()
 ```
