@@ -1,5 +1,20 @@
 # Changelog
 
+## rtiktoken 0.11.0.3
+
+- Only regenerate the extendr wrappers (via the `document` binary) when
+  invoked through `devtools::document()`/roxygen2. This avoids linking
+  an extra binary against R’s shared library during
+  `R CMD INSTALL`/check, which failed on platforms where `libR` is not
+  built as a shared library (e.g. r-devel-linux-x86_64-fedora-clang) or
+  not locatable at runtime (macOS).
+
+## rtiktoken 0.11.0.2
+
+CRAN release: 2026-08-21
+
+- Fix notes for Windows.
+
 ## rtiktoken 0.11.0.1
 
 - Update extendr dependency to fix CRAN notes.
